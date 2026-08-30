@@ -13,7 +13,7 @@ FROM ghcr.io/yannh/kubeconform:$KUBECONFORM_VERSION-alpine AS kubeconform
 
 # no need to parametrize the version of Alpine Linux as it’s only used
 # for curl & unzip
-FROM alpine:3.16 AS downloader
+FROM alpine:3.24 AS downloader
 
 ARG HELM_VERSION=v3.10.1
 
