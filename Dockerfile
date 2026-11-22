@@ -21,7 +21,7 @@ RUN apk add -q --no-cache curl
 
 RUN mkdir /helm && cd /helm && curl -sSL https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz | tar xzf -
 
-FROM gcr.io/distroless/static@sha256:912bd2c2b9704ead25ba91b631e3849d940f9d533f0c15cf4fc625099ad145b1
+FROM gcr.io/distroless/static@sha256:4c2cd1dee442c9a99924a378c7c126fac8fef14771579ef567c3f2bdd7a5122a
 
 COPY --from=builder /usr/local/src/app/helm-kubeconform-action /helm-kubeconform-action
 
